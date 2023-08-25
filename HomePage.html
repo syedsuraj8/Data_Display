@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Student Form</title>
+	<link rel="stylesheet" type="text/css" href="ProjectCss.css">
+	<style type="text/css"></style>
+	<script type="text/javascript">
+	</script>
+
+
+</head>
+
+<body background="img.png.Html">
+	<nav class="container">
+		<ul>
+			<li><a href="HomePage.html">Home</a></li>
+			<li><a href="DataDisplay.html">Data Display</a></li>
+			<li><a href="AboutPage.html">About Us</a></li>
+		</ul>
+	</nav>
+	<div class="flex">
+		<div class="forms">
+			<form action="DataDisplay.html">
+				<h3 align="center">Job Application</h3>
+
+				<label>First Name : </label>
+				<input type="text" name="first name" required placeholder="first name" class="input"><br><br>
+
+				<label>Last Name : </label>
+				<input type="text" name="last name" required placeholder="last name" class="input"><br><br>
+
+				<lable>Email : </lable>
+				<input type="text" name="email" required placeholder="email" class="input"><br><br>
+
+				<lable>Mobile : </lable>
+				<input type="text" name="mobile" required placeholder="mobile" class="input"><br><br>
+
+				<lable>Gender : </lable>
+				<input type="radio" name="gender" required value="Male">Male
+				<input type="radio" name="gender" required value="Female">Female
+				<input type="radio" name="gender" required value="Others">Others <br><br>
+
+				<label>Date of Birth : </label>
+				<input type="date" name="date" required><br><br>
+
+				<label>Country : </label>
+				<select id="country" name="country" required>
+					<option value="India">India</option>
+					<option value="USA">USA</option>
+					<option value="UK">UK</option>
+				</select><br><br>
+
+				<label>Qualification : </label>
+				<input type="radio" name="qualification" required value="B.Tech">B.Tech
+				<input type="radio" name="qualification" required value="MBA">MBA
+				<input type="radio" name="qualification" required value="MCA">MCA<br><br>
+
+				<input type="submit" name="" class="Submit">
+			</form>
+		</div>
+
+	</div>
+</body>
+
+</html>

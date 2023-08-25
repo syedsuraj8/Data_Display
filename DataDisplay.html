@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Data Display</title>
+  <link rel="stylesheet" type="text/css" href="ProjectCss.css">
+</head>
+
+<body>
+  <nav class="container">
+    <ul>
+      <li><a href="HomePage.html">Home</a></li>
+      <li><a href="DataDisplay.html">Data Display</a></li>
+      <li><a href="AboutPage.html">About Us</a></li>
+    </ul>
+  </nav>
+  <h2 align="center">Data Display</h2>
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>moblie</th>
+      <th>gender</th>
+      <th>date</th>
+      <th>country</th>
+      <th>Qualification</th>
+    </tr>
+    <tbody id="table-body"></tbody>
+  </table>
+
+  <script>
+
+    // getting data from student form to the table using js file
+    const urlParams = new URLSearchParams(window.location.search);
+    const firstname = urlParams.get('first name');
+    const lastname = urlParams.get('last name');
+    const email = urlParams.get('email');
+    const mobile = urlParams.get('mobile');
+    const gender = urlParams.get('gender');
+    const date = urlParams.get('date');
+    const country = urlParams.get('country');
+    const qualification = urlParams.get('qualification');
+
+    const tableBody = document.getElementById('table-body');
+
+    // creating the table row and table data
+    const row = document.createElement('tr');
+     
+
+
+    const firstnameData = document.createElement('td');
+    const lastnameData = document.createElement('td');
+    const emailData = document.createElement('td');
+    const mobileData = document.createElement('td');
+    const genderData = document.createElement('td');
+    const dateData = document.createElement('td');
+    const countryData = document.createElement('td');
+    const qualificationData = document.createElement('td');
+
+    // the values which are received from student form are assigning to the table data variables
+    firstnameData.textContent = firstname;
+    lastnameData.textContent = lastname;
+    emailData.textContent = email;
+    mobileData.textContent = mobile;
+    genderData.textContent = gender;
+    dateData.textContent = date;
+    countryData.textContent = country;
+    qualificationData.textContent = qualification;
+
+    // assigning the values of table data variables to the table row
+    row.appendChild(firstnameData);
+    row.appendChild(lastnameData);
+    row.appendChild(emailData);
+    row.appendChild(mobileData);
+    row.appendChild(genderData);
+    row.appendChild(dateData);
+    row.appendChild(countryData);
+    row.appendChild(qualificationData);
+
+    // finally assigning the table row data to the table body
+    tableBody.appendChild(row);
+  </script>
+
+</body>
+
+</html>
+
+<!-- tableBody.appendChild(firstnameData);
+tableBody.appendChild(lastnameData);
+tableBody.appendChild(emailData);
+tableBody.appendChild(mobileData);
+tableBody.appendChild(genderData);
+tableBody.appendChild(dateData);
+tableBody.appendChild(countryData);
+tableBody.appendChild(qualificationData); -->
